@@ -2,10 +2,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 const webpack = require("webpack");
 // const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
-// const CopyPlugin = require('copy-webpack-plugin');
-// new CopyPlugin({
-//     patterns: [{ from: path.resolve(__dirname, "../public/assets"), to: path.resolve(__dirname, "../dist/assets") }], 
-//  }),
 
 module.exports = {
     entry: `${path.resolve(__dirname, "../src")}/index.tsx`,
@@ -24,9 +20,6 @@ module.exports = {
         }),
         // new webpack.ProvidePlugin({
         //     React: "react",
-        // }),
-        // new CopyPlugin({
-        //    patterns: [{ from: path.resolve(__dirname, "../public/assets"), to: path.resolve(__dirname, "../dist/assets") }], 
         // }),
     ],
     resolve: {

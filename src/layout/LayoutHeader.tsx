@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
-// import profileImg from "../../public/assets/profile.jpg";
-
 const LayoutHeaderWrapper = styled.div`
     width: 100%;
     height: 100%;
