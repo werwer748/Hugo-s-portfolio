@@ -14,5 +14,9 @@ export const GlobalStyles = createGlobalStyle`
         src: url("/assets/fonts/Dongle/Dongle-Regular.ttf");
     }
 
+    * {
+        font-family: "dongle";
+    }
+
     font-family: "dongle";
 `;
