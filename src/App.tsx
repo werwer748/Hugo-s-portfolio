@@ -1,32 +1,28 @@
 import React from "react";
-import { createGlobalStyle } from "styled-components";
-import reset from "styled-reset";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 
 import { GlobalStyles } from "./style/GlobalStyle";
 
 import Layout from "./layout/Layout";
+import Intro from "./pages/Intro";
+import Career from "./pages/Career";
+import Stack from "./pages/Stack";
+import SendEmail from "./pages/SendEmail";
 
-// const GlobalStyles = createGlobalStyle`
-//     ${reset}
-
-//     @font-face {
-//         font-family: "gugi";
-//         src: url("/assets/fonts/Gugi/Gugi-Regular.ttf");
-//     }
-
-//     @font-face {
-//         font-family: "dongle";
-//         src: url("/assets/fonts/Dongle/Dongle-Regular.ttf");
-//     }
-// `;
 
 const App = () => {
     return (
-        <div>
+        <BrowserRouter>
             <GlobalStyles />
             <Layout>
+                    <Routes>
+                        <Route path="/" element={<Intro />} />
+                        <Route path="/Career" element={<Career />} />
+                        <Route path="/Stack" element={<Stack />} />
+                        <Route path="/SendEmail" element={<SendEmail />} />
+                    </Routes>
             </Layout>
-        </div>
+        </BrowserRouter>
     );
 };
 
