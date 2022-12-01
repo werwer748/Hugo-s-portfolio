@@ -25,6 +25,7 @@
     "@types/react-router-dom": "^5.3.3",
     "@types/styled-components": "^5.1.26",
     "babel-loader": "^9.1.0",
+    "copy-webpack-plugin": "^11.0.0",
     "core-js": "^3.26.1",
     "css-loader": "^6.7.2",
     "css-minimizer-webpack-plugin": "^4.2.2",

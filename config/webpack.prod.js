@@ -5,6 +5,7 @@ const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = merge(common, {
     mode: "production",
@@ -25,17 +26,14 @@ module.exports = merge(common, {
                     "sass_loader",
                 ],
             },
-            {
-                test: /\.png|.jpg|.jpeg/,
-                type: 'asset',
-            },
-            {
-                test: /\.ttf/,
-                type: 'asset',
-            },
         ],
     },
-    plugins: [new MiniCssExtractPlugin()],
+    plugins: [
+        new MiniCssExtractPlugin(),
+        new CopyPlugin({
+            patterns: [{ from: path.resolve(__dirname, "../public/assets"), to: path.resolve(__dirname, "../dist/assets") }], 
+         }),
+    ],
     optimization: {
         usedExports: true,
         minimize: true,
