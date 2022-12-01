@@ -21,10 +21,6 @@ module.exports = merge(common, {
             {
                 test: /\.(ss|sc|c)ss$/i,
                 use: ["style-loader", "css-loader", "sass-loader"],
-            },
-            {
-                test: /\.(jpe?g|gif|png|webp|bmp|svg)$/,
-                type: 'asset',
             }
         ],
     },

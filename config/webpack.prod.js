@@ -24,7 +24,15 @@ module.exports = merge(common, {
                     "css-loader",
                     "sass_loader",
                 ],
-            }
+            },
+            {
+                test: /\.png|.jpg|.jpeg/,
+                type: 'asset',
+            },
+            {
+                test: /\.ttf/,
+                type: 'asset',
+            },
         ],
     },
     plugins: [new MiniCssExtractPlugin()],
