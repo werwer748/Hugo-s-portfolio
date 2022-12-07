@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useLayoutEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -25,9 +25,14 @@ const IntroCallWrapper = styled.div`
 `;
 
 const IntroCall = () => {
-  const sendSMS = () => {
-    location.href = `sms:010-3968-5462?body=테스트문자메시지`;
-  };
+  const [osCheck, setOsCheck] = useState<null | string>(null);
+  useLayoutEffect(() => {
+    if (/iPhone|iPad|iPod|Mac/i.test(window.navigator.userAgent)) {
+      setOsCheck("&");
+    } else {
+      setOsCheck("?");
+    }
+  }, []);
   return (
     <IntroCallWrapper>
       <ul>
@@ -35,7 +40,7 @@ const IntroCall = () => {
           <label>연락처 : </label>
           <label>
             &nbsp;
-            <a href="sms:01039685462&body=내용을 입력해주세요.">
+            <a href={`sms:01039685462${osCheck}body=내용을 입력해주세요.`}>
               010-3968-5462
             </a>
           </label>
