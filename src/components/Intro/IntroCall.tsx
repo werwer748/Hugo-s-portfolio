@@ -35,7 +35,7 @@ const IntroCall = () => {
           <label>연락처 : </label>
           <label>
             &nbsp;
-            <a href="sms:01039685462?body=내용을 입력해주세요.">
+            <a href="sms:01039685462&body=내용을 입력해주세요.">
               010-3968-5462
             </a>
           </label>
