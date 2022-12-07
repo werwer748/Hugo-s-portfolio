@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const IntroCallWrapper = styled.div`
   width: 90%;
-  height: 100px;
+  height: 50px;
   border-bottom: 1px solid gray;
 
   > ul {

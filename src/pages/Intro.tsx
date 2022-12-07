@@ -3,6 +3,9 @@ import styled from "styled-components";
 
 import IntroHeader from "../components/Intro/IntroHeader";
 import IntroCall from "../components/Intro/IntroCall";
+import IntroEtc from "../components/Intro/IntroEtc";
+import IntroProud from "../components/Intro/IntroProud";
+import Introduce from "../components/Intro/Introduce";
 
 const IntroWrapper = styled.main`
   width: 100%;
@@ -17,6 +20,9 @@ const Intro = () => {
     <IntroWrapper>
       <IntroHeader />
       <IntroCall />
+      <IntroEtc />
+      <IntroProud />
+      <Introduce />
     </IntroWrapper>
   );
 };
